@@ -1,20 +1,90 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
+    background-color: #f0e6e6;
     line-height: 1.65;
     padding-bottom: 1000px;
 }
 
-.container-satu{
+.container-satu {
     width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-satu {
+    flex: 0 1 150px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ffebeb;
+    border-radius: 4px;
+    border: 1px solid #e0b4b4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kolom-utama {
+    flex: 2 1 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #e0f7fa;
+    border-radius: 4px;
+    border: 1px solid #b2ebf2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-dua {
+    flex: 0 0 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #e8f5e9;
+    border-radius: 4px;
+    border: 1px solid #c8e6c9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 0;
+    color: #333333;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333333;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555555;
 }
