@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Data Diri</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        form{
+            width: 300px;
+            
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Data Diri</h2>
+    <form id="dataForm">
+        <!-- Input Nama -->
+        <label for="name">Nama  :</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <!-- Input Alamat -->
+        <label for="address">Alamat :</label>
+        <input type="text" id="address" name="address"><br><br>
+        
+        <!-- Input Tanggal Lahir -->
+        <label for="dob">Tanggal Lahir:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+        
+        <!-- Input Jenis Kelamin -->
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="male" name="gender" value="Laki-laki">
+        <label for="male">Laki-laki</label>
+        <input type="radio" id="female" name="gender" value="Perempuan">
+        <label for="female">Perempuan</label><br><br>
+        
+        <!-- Input Hobi -->
+        <label>Hobi:</label><br>
+        <input type="checkbox" id="swimming" name="hobby" value="Berenang">
+        <label for="swimming">Berenang</label><br>
+        <input type="checkbox" id="running" name="hobby" value="Berlari">
+        <label for="running">Berlari</label><br>
+        <input type="checkbox" id="otherHobby" name="hobby" value="Lain-lain">
+        <label for="otherHobby">Lain-lain</label><br><br>
+        
+        <!-- Input Pekerjaan -->
+        <label>Pekerjaan:</label><br>
+        <input type="checkbox" id="private" name="job" value="Swasta">
+        <label for="private">Swasta</label><br>
+        <input type="checkbox" id="pns" name="job" value="PNS">
+        <label for="pns">PNS</label><br>
+        <input type="checkbox" id="otherJob" name="job" value="Lain-lain">
+        <label for="otherJob">Lain-lain</label><br><br>
+        
+        <!-- Konfirmasi -->
+        <input type="checkbox" id="confirm" name="confirm" value="confirmed">
+        <label for="confirm">Check jika Anda akan mengirimkan data ini.</label><br><br>
+        
+        <!-- Tombol Cek -->
+        <button type="button" onclick="checkForm()">Cek!</button>
+    </form>
+    
+    <!-- Area untuk hasil pengecekan -->
+    <p id="result"></p>
+
+    <script>
+        function checkForm() {
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+            var dob = document.getElementById("dob").value;
+            var confirm = document.getElementById("confirm").checked;
+            
+            if (name === "" || address === "" || dob === "") {
+                document.getElementById("result").innerHTML = "Harap lengkapi semua data.";
+            } else if (!confirm) {
+                document.getElementById("result").innerHTML = "Anda harus mencentang kotak konfirmasi sebelum mengirim.";
+            } else {
+                document.getElementById("result").innerHTML = "Data berhasil dicek!";
+            }
+        }
+    </script>
+
+</body>
+</html>
