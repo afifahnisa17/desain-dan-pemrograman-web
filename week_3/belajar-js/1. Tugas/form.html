@@ -32,7 +32,8 @@
         
         <!-- Input Alamat -->
         <label for="address">Alamat :</label>
-        <input type="text" id="address" name="address"><br><br>
+        <textarea id="address" name="address"></textarea><br><br>
+        
         
         <!-- Input Tanggal Lahir -->
         <label for="dob">Tanggal Lahir:</label>
@@ -67,28 +68,30 @@
         <input type="checkbox" id="confirm" name="confirm" value="confirmed">
         <label for="confirm">Check jika Anda akan mengirimkan data ini.</label><br><br>
         
-        <!-- Tombol Cek -->
-        <button type="button" onclick="checkForm()">Cek!</button>
+        <!-- Tombol Kirim-->
+        <button type="button" onclick="checkForm()">Kirim</button>
     </form>
     
-    <!-- Area untuk hasil pengecekan -->
-    <p id="result"></p>
+    
+<p id="result"></p>
 
-    <script>
-        function checkForm() {
-            var name = document.getElementById("name").value;
-            var address = document.getElementById("address").value;
-            var dob = document.getElementById("dob").value;
-            var confirm = document.getElementById("confirm").checked;
-            
-            if (name === "" || address === "" || dob === "") {
-                document.getElementById("result").innerHTML = "Harap lengkapi semua data.";
-            } else if (!confirm) {
-                document.getElementById("result").innerHTML = "Anda harus mencentang kotak konfirmasi sebelum mengirim.";
-            } else {
-                document.getElementById("result").innerHTML = "Data berhasil dicek!";
-            }
+<script>
+    function checkForm() {
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var dob = document.getElementById("dob").value;
+        var confirm = document.getElementById("confirm").checked;
+        
+        if (name === "" || address === "" || dob === "") {
+            alert("Harap lengkapi semua data.");
+        } else if (!confirm) {
+            alert("Anda harus mencentang kotak konfirmasi sebelum mengirim.");
+        } else {
+            alert("Data berhasil dikirim!");
         }
+    }
+</script>
+
     </script>
 
 </body>
