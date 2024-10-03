@@ -10,9 +10,14 @@
     <?php
         $Listdosen=["Elok Nur Hamdana", "Unggul Permana", "Bagas Nugraha"];
 
-        echo $Listdosen[2] . "<br>";
-        echo $Listdosen[0] . "<br>";
-        echo $Listdosen[1] . "<br>";
+        for($i = 1; $i <= 3; $i++){
+            echo "Ini perulangan ke-" . $i . "<br>";
+            echo $Listdosen[2] . "<br>";
+            echo $Listdosen[0] . "<br>";
+            echo $Listdosen[1] . "<br>";
+            echo "<br>";
+        }
+        
     ?>
 </body>
 </html>
