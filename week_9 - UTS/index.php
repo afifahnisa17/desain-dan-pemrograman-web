@@ -7,10 +7,10 @@
     <script src="jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function() {
-            // saat tombol order diklik, tampilkan modal
+            // saat tombol order diklik, menampilkan modal
             $('.button1').click(function() {
-                $('#modalOverlay').fadeIn(); // tampilkan overlay
-                $('#orderForm').fadeIn(); // tampilkan form
+                $('#modalOverlay').fadeIn(); // tampil overlay
+                $('#orderForm').fadeIn(); // tampil form
             });
 
             // Ketika tombol close modal diklik
@@ -26,7 +26,7 @@
 
             $('.order-link').click(function(e) {
                 e.preventDefault(); // Mencegah aksi default link
-                $('#modalOverlay').fadeIn(); // Tampilkan overlay
+                $('#modalOverlay').fadeIn(); //menampilkan overlay
                 $('#orderForm').fadeIn(); // Tampilkan form
             });
 

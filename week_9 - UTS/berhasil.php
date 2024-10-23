@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Menentukan harga berdasarkan jenis bunga
     switch ($flowerType) {
         case 'Rose':
-            $price = 20; 
+            $price = 20; //Harga untuk Rose
             break;
         case 'Tulips':
             $price = 15; // Harga untuk Tulips
