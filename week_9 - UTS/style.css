@@ -1,0 +1,285 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Menyembunyikan scrollbar vertikal */
+body {
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Menyembunyikan scrollbar */
+}
+
+
+/*navbar*/
+.navbar {
+    background-color: #e39595; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 30px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; /* Menempatkan navbar di atas elemen lain */
+    min-height: 60px; /* Menjaga tinggi minimum untuk navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 35px;
+    color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    display: flex;
+    width: 80%; 
+    margin: 0; 
+    margin-left: 10%;
+}
+
+.nav-links {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.nav-links li {
+    display: inline; /* Ensure list items are in a row */
+    margin-right: 20px; /* Adjust spacing between links */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Text color */
+    padding: 5px 10px; /* Padding around links */
+    transition: background-color 0.3s color 0.3s; /* Transition for hover effect */
+}
+
+
+.nav-links a:hover{
+    background-color: #ffd9d9;
+    color: #000;
+    border-radius: 5px;
+}
+
+/*home*/
+.home {
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    color: white;
+    text-align: left;
+    padding: 30px; 
+}
+
+.ads, .desc, .button1 {
+    display: block;
+    width: 80%; 
+    margin: 0; 
+    margin-left: 10%;
+}
+
+.ads {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 270%;
+    color: #000;
+    margin-bottom: 10px; 
+}
+
+.desc {
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    margin-bottom: 10px; 
+}
+
+.button1 {
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; 
+    max-width: 200px; 
+    display: inline-block; 
+    margin-top: 10px;
+    align-self: flex-start;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.button1:hover{
+    background-color: #000;
+    color: #ffd9d9;
+    border-radius: 15px;
+}
+
+/*Buket Bunga*/
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* Kurangi jarak antar kartu */
+    padding: 30px;
+    max-width: 1200px; /* Menetapkan lebar maksimal container */
+    margin: 0 auto; /* Agar container berada di tengah */
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px; /* Perlebar kartu */
+    margin: 0 auto; /* Agar card berada di tengah */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Sedikit memperbesar card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tambahkan shadow */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Menetapkan tinggi tetap agar gambar seragam */
+    object-fit: cover; /* Memotong gambar agar sesuai tanpa merusak proporsi */
+    border-radius: 10px 10px 0 0;
+}
+
+.button1 {
+    background-color: #e39595; /* Warna tombol */
+    color: #000; /* Warna teks tombol */
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none; /* Tanpa batas */
+}
+
+.button1:hover {
+    background-color: #ffd9d9; /* Warna saat hover */
+    color: #000;
+}
+
+.product{
+    margin-top: 5%;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+}
+
+/*form*/
+.modal {
+    display: none; /* Modal tidak terlihat secara default */
+    justify-content: center; /* Mengatur konten di tengah horizontal */
+    align-items: center; /* Mengatur konten di tengah vertical */
+    position: fixed; /* Posisi tetap di layar */
+    top: 0; /* Menjaga posisi di atas */
+    left: 0; /* Menjaga posisi di kiri */
+    right: 0; /* Menjaga posisi di kanan */
+    bottom: 0; /* Menjaga posisi di bawah */
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap dengan transparansi */
+    z-index: 1000; /* Menempatkan modal di atas elemen lain */
+}
+
+
+
+#orderForm {
+    background-color: #fff; /* Latar belakang putih untuk form */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
+    padding: 20px; /* Padding di dalam form */
+    width: 90%; /* Lebar form */
+    max-width: 500px; /* Lebar maksimum */
+    margin: 0 auto; /* Menempatkan form di tengah */
+    overflow: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 80vh;
+}
+
+#orderForm h2 {
+    text-align: center; /* Judul di tengah */
+    color: #e39595; /* Warna judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+#orderForm .form-row {
+    display: flex; /* Mengatur label dan input dalam satu baris */
+    align-items: center; /* Menjaga agar label dan input terletak di tengah secara vertikal */
+    margin-bottom: 15px; /* Jarak bawah untuk setiap baris */
+}
+
+#orderForm label {
+    flex: 1; /* Memungkinkan label mengambil ruang yang cukup */
+    font-weight: bold; /* Tebal */
+}
+
+#orderForm input[type="text"],
+#orderForm input[type="email"],
+#orderForm input[type="tel"],
+#orderForm input[type="number"],
+#orderForm textarea,
+#orderForm select {
+    flex: 2; /* Input akan mengambil dua kali ruang label */
+    padding: 10px; /* Padding di dalam input */
+    border: 1px solid #ddd; /* Batas */
+    border-radius: 5px; /* Sudut membulat */
+    box-sizing: border-box; /* Menghitung padding dan border dalam lebar */
+}
+
+#orderForm .button-container {
+    display: flex; /* Mengatur tombol dalam satu baris */
+    justify-content: space-between; /* Menyebar tombol dengan ruang antara */
+}
+
+#orderForm button {
+    background-color: #e39595; /* Warna tombol */
+    color: #fff; /* Warna teks tombol */
+    padding: 10px; /* Padding di dalam tombol */
+    border: none; /* Tanpa batas */
+    border-radius: 5px; /* Sudut membulat tombol */
+    cursor: pointer; /* Kursor pointer saat hover */
+    transition: background-color 0.3s; /* Transisi warna */
+    flex: 1; /* Tombol mengambil ruang yang sama */
+    margin: 0 5px; /* Jarak antar tombol */
+}
+
+#orderForm button:hover {
+    background-color: #ffd9d9; /* Warna saat hover */
+}
+
+.form-title {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.form-group {
+    display: flex; /* Menggunakan flexbox untuk label dan input */
+    justify-content: space-between; /* Jarak antara label dan input */
+    margin-bottom: 15px; /* Jarak antar form group */
+}
+
+.form-actions {
+    display: flex; /* Menempatkan tombol di sebelah-sebelahan */
+    justify-content: space-between; /* Jarak antar tombol */
+}
+
